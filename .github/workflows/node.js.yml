@@ -33,6 +33,11 @@ jobs:
     - name: ESLint
       run: |
         npm run lint
+    - name: Upload analysis results to GitHub
+      uses: github/codeql-action/upload-sarif@v2
+      with:
+        sarif_file: eslint-results.sarif
+        wait-for-processing: true
     - name: Build app
       run: |
         npm run build --if-present
