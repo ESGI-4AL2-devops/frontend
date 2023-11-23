@@ -29,3 +29,5 @@ export default function ArticleCard({ article }: { article: Article }) {
     </Card>
   );
 }
+
+var a = 0;
