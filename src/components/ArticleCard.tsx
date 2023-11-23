@@ -30,4 +30,4 @@ export default function ArticleCard({ article }: { article: Article }) {
   );
 }
 
-var a = 0;
+// var a = 0;
