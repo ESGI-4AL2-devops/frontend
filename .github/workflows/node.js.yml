@@ -30,6 +30,10 @@ jobs:
     - name: Unit tests
       run: |
         npm run test
+    - name: Upload coverage to GitHub
+      uses: codecov/codecov-action@v3
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
     - name: ESLint
       run: |
         npm run lint
