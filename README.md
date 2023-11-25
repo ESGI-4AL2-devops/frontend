@@ -28,8 +28,6 @@ By default, when building the project in production mode, the file `env/.env.pro
 npm run build
 ```
 
----
-
 # Travaux
 
 ## Minimum
