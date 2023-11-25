@@ -1,11 +1,11 @@
-import {getArticles} from "../../../src/core/articles/services/ArticlesService";
+import { getArticles } from "../../../src/core/articles/services/ArticlesService";
 
-describe('ArticlesService', () => {
-  it('should be false', () => {
+describe("ArticlesService", () => {
+  it("should be false", () => {
     expect(false).toBe(false);
   });
 
-  it('getArticles should not be equal to false', async () => {
+  it("getArticles should not be equal to false", async () => {
     // expect(await getArticles()).not.toBe(false);
     expect(await getArticles).not.toEqual(false);
   });
