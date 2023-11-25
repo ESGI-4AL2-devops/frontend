@@ -6,7 +6,6 @@ describe("ArticlesService", () => {
   });
 
   it("getArticles should not be equal to false", async () => {
-    // expect(await getArticles()).not.toBe(false);
     expect(await getArticles).not.toEqual(false);
   });
 });
