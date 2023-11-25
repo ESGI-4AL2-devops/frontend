@@ -53,7 +53,7 @@ npm run build
 ### Longs
 - [ ] CI :
   - [x] qualité de code (SonarCloud, ~~Code Climate~~)
-  - [ ] afficher le rapport de qualité dans une _PR_ et bloquer la validation si en dessous d'un seuil
+  - [ ] afficher le rapport de qualité du code dans une _PR_ et bloquer la validation si en dessous d'un seuil
   - [ ] *pipeline* auto de tests automatiques (e2e, montée de charge)
   - [ ] création d'environnement à la volée
 
