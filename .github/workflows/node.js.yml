@@ -4,6 +4,8 @@
 name: Node.js CI
 
 on:
+  schedule:
+    - cron: '0 4 * * *'  # Run daily at 4 AM
   push:
     branches: [ "main" ]
   pull_request:
