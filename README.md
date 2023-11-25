@@ -46,7 +46,7 @@ npm run build
   - [x] linter
   - [x] pour _PR_
   - [ ] déploiement de _releases_ (sur des _tags_)
-  - [ ] calculer et afficher la couverture des tests unitaires dans les _PR_
+  - [x] calculer et afficher la couverture des tests unitaires dans les _PR_
   - [ ] déploiement sur Kubernetes (_pipeline_ peut être lancée manuellement)
   - [ ] déploiement sur Kubernetes avec Helm
 
