@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1700772526884" clover="3.2.0">
-  <project timestamp="1700772526884" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
+<coverage generated="1700925920226" clover="3.2.0">
+  <project timestamp="1700925920226" name="All files">
+    <metrics statements="18" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0" elements="22" coveredelements="8" complexity="0" loc="18" ncloc="18" packages="3" files="3" classes="3"/>
+    <package name="configuration">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="config.ts" path="/Users/loiczhu/Documents/schools/ESGI/4AL/devOps/projet/frontend/src/configuration/config.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="core.articles.models">
+      <metrics statements="7" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="Article.ts" path="/Users/loiczhu/Documents/schools/ESGI/4AL/devOps/projet/frontend/src/core/articles/models/Article.ts">
+        <metrics statements="7" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="core.articles.services">
+      <metrics statements="9" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="ArticlesService.ts" path="/Users/loiczhu/Documents/schools/ESGI/4AL/devOps/projet/frontend/src/core/articles/services/ArticlesService.ts">
+        <metrics statements="9" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>
