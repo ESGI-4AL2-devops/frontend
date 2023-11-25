@@ -17,7 +17,7 @@ jobs:
     strategy:
       matrix:
         # node-version: [16.x, 18.x]
-        node-version: [16.x]
+        node-version: [18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     steps:
     - name: Checkout code
@@ -44,8 +44,8 @@ jobs:
           # mandatory
           -Dsonar.organization=esgi-4al2-devops
           -Dsonar.projectKey=ESGI-4AL2-devops_frontend
-          -Dsonar.cpd.exclusions=coverage
           -Dsonar.exclusions=coverage
+          # -Dsonar.cpd.exclusions=coverage
           # -Dsonar.javascript.lcov.reportPaths=coverage
           # Comma-separated paths to directories containing main source files.
           #-Dsonar.sources= # optional, default is project base directory
