@@ -44,7 +44,6 @@ jobs:
           # mandatory
           -Dsonar.organization=esgi-4al2-devops
           -Dsonar.projectKey=ESGI-4AL2-devops_frontend
-          -Dsonar.issue.ignore.allfile=coverage
           -Dsonar.cpd.exclusions=coverage
           -Dsonar.exclusions=coverage
           -Dsonar.javascript.lcov.reportPaths=coverage
