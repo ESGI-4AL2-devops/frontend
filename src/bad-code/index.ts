@@ -1,9 +1,9 @@
-function calculateArea(radius) {
+function calculateArea(radius: number): number {
   const pi = 3.14159;
   return pi * radius * radius;
 }
 
-function calculateCircumference(radius) {
+function calculateCircumference(radius: number): number {
   const pi = 3.14159;
   return 2 * pi * radius;
 }
