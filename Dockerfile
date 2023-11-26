@@ -8,13 +8,24 @@ RUN groupadd -r admingroup && useradd -m -r -g admingroup admin1
 RUN mkdir /app
 WORKDIR /app
 COPY ./package*.json ./
+RUN chown -R admin1:admingroup /app
 
 USER admin1
 RUN npm ci --ignore-scripts
 
 USER root
-COPY src/ ./src/
+COPY __tests__ ./__tests__
+COPY cypress ./cypress
+COPY env/ ./env/
 COPY public/ ./public/
+COPY src/ ./src/
+COPY .env ./
+COPY cypress.config.ts ./
+COPY jest.config.cjs ./
+COPY index.html ./
+COPY tsconfig.json ./
+COPY tsconfig.node.json ./
+COPY vite.config.ts ./
 RUN chown -R admin1:admingroup /app
 
 USER admin1
