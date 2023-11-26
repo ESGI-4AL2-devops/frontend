@@ -7,51 +7,42 @@ function calculateCircumference(radius: number): number {
   const pi = 3.14159;
   return 2 * pi * radius;
 }
-function calculateCircumference(radius: number): number {
-  const pi = 3.14159;
-  return 2 * pi * radius;
-}
-function calculateCircumference(radius: number): number {
-  const pi = 3.14159;
-  return 2 * pi * radius;
-}
-function calculateCircumference(radius: number): number {
-  const pi = 3.14159;
-  return 2 * pi * radius;
-}
-function calculateCircumference(radius: number): number {
-  const pi = 3.14159;
-  return 2 * pi * radius;
-}
-function calculateCircumference(radius: number): number {
-  const pi = 3.14159;
-  return 2 * pi * radius;
-}
-function calculateCircumference(radius: number): number {
-  const pi = 3.14159;
-  return 2 * pi * radius;
-}
-function calculateCircumference(radius: number): number {
-  const pi = 3.14159;
-  return 2 * pi * radius;
-}
-function calculateCircumference(radius: number): number {
-  const pi = 3.14159;
-  return 2 * pi * radius;
-}
-function calculateCircumference(radius: number): number {
-  const pi = 3.14159;
-  return 2 * pi * radius;
-}
-function calculateCircumference(radius: number): number {
-  const pi = 3.14159;
-  return 2 * pi * radius;
-}
-function calculateCircumference(radius: number): number {
-  const pi = 3.14159;
-  return 2 * pi * radius;
-}
-
+// function calculateCircumference(radius: number): number {
+//   const pi = 3.14159;
+//   return 2 * pi * radius;
+// }
+// function calculateCircumference(radius: number): number {
+//   const pi = 3.14159;
+//   return 2 * pi * radius;
+// }
+// function calculateCircumference(radius: number): number {
+//   const pi = 3.14159;
+//   return 2 * pi * radius;
+// }
+// function calculateCircumference(radius: number): number {
+//   const pi = 3.14159;
+//   return 2 * pi * radius;
+// }
+// function calculateCircumference(radius: number): number {
+//   const pi = 3.14159;
+//   return 2 * pi * radius;
+// }
+// function calculateCircumference(radius: number): number {
+//   const pi = 3.14159;
+//   return 2 * pi * radius;
+// }
+// function calculateCircumference(radius: number): number {
+//   const pi = 3.14159;
+//   return 2 * pi * radius;
+// }
+// function calculateCircumference(radius: number): number {
+//   const pi = 3.14159;
+//   return 2 * pi * radius;
+// }
+// function calculateCircumference(radius: number): number {
+//   const pi = 3.14159;
+//   return 2 * pi * radius;
+// }
 
 (function runBadCodeForSonarCloud(): void {
   console.log("Bad code for SonarCloud: ");
