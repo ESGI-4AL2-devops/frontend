@@ -32,7 +32,7 @@ npm run build
 
 ## Minimum
 
-- [ ] Docker
+- [x] Docker
 - [ ] CI : 
   - [x] arrêt si une étape échoue
   - [x] tests unitaires
