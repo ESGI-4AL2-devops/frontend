@@ -45,14 +45,14 @@ npm run build
 - [ ] CI :
   - [x] linter
   - [x] pour _PR_
-  - [ ] déploiement de _releases_ (sur des _tags_)
+  - [x] déploiement de _releases_ (sur des _tags_)
   - [x] calculer et afficher la couverture des tests unitaires dans les _PR_
   - [ ] déploiement sur Kubernetes (_pipeline_ peut être lancée manuellement)
   - [ ] déploiement sur Kubernetes avec Helm
 
 ### Longs
 - [ ] CI :
-  - [ ] qualité de code (SonarCloud, ~~Code Climate~~)
+  - [x] qualité de code (SonarCloud, ~~Code Climate~~)
   - [ ] afficher le rapport de qualité du code dans une _PR_ et bloquer la validation si en dessous d'un seuil
   - [x] *pipeline* auto de tests automatiques (e2e, montée de charge)
   - [ ] création d'environnement à la volée
