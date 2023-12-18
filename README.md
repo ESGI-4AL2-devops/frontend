@@ -37,7 +37,7 @@ npm run build
   - [x] arrêt si une étape échoue
   - [x] tests unitaires
   - [x] _build_
-  - [ ] mise en ligne du livrable (ex : DockerHub)
+  - [x] mise en ligne du livrable (ex : DockerHub)
 - [ ] déploiement sur Kubernetes
 
 ## Bonus
