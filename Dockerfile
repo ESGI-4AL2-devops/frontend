@@ -29,4 +29,11 @@ COPY vite.config.ts ./
 RUN chown -R admin1:admingroup /app
 
 USER admin1
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "build"]
+
+FROM nginx:1.23
+WORKDIR /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /build/dist ./
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
