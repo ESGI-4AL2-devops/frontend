@@ -26,7 +26,7 @@ COPY index.html ./
 COPY tsconfig.json ./
 COPY tsconfig.node.json ./
 COPY vite.config.ts ./
-RUN chown -R admin1:admingroup /app
+RUN chown -R admin1:admingroup /build
 
 USER admin1
 CMD ["npm", "run", "build"]
