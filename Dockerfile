@@ -29,7 +29,8 @@ COPY vite.config.ts ./
 RUN chown -R admin1:admingroup /build
 
 USER admin1
-CMD ["npm", "run", "build"]
+#CMD ["npm", "run", "build"]
+RUN npm run build
 
 FROM nginx:1.23
 WORKDIR /usr/share/nginx/html
