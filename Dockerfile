@@ -30,7 +30,6 @@ COPY vite.config.ts ./
 USER admin1
 RUN npm run build
 
-# ---
 
 FROM nginx:1.23
 
