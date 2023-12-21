@@ -8,7 +8,7 @@ RUN groupadd -r admingroup && useradd -m -r -g admingroup admin1
 RUN mkdir /build
 WORKDIR /build
 COPY ./package*.json ./
-RUN chown -R admin1:admingroup /app
+RUN chown -R admin1:admingroup /build
 
 USER admin1
 RUN npm ci --ignore-scripts
