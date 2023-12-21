@@ -34,10 +34,7 @@ RUN npm run build
 
 FROM nginx:1.23
 
-# in Alpine Linux
-# -S: Create a system group.
-# -G: Assign the user to the "admingroup" group.
-RUN addgroup -S admingroup && adduser -S admin1 -G admingroup
+RUN groupadd -r admingroup && useradd -m -r -g admingroup admin1
 WORKDIR /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /build/dist ./
