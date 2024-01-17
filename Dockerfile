@@ -44,7 +44,8 @@ RUN chown -R admin1:admingroup /usr/share/nginx/html
 
 # Grant capabilities to the Nginx binary to bind to well-known ports
 USER root
-RUN apt-get update && apt-get install -y --no-install-recommends libcap2-bin && setcap cap_net_bind_service=+ep /usr/sbin/nginx
+RUN apt-get update && apt-get install -y libcap2-bin \
+    && setcap cap_net_bind_service=+ep /usr/sbin/nginx
 
 USER admin1
 
