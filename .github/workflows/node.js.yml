@@ -90,15 +90,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-    - name: Prepare kubeconfig
-      run: |
-        cd kubernetes
-        sed -i "s|CLUSTER_NAME_PLACEHOLDER|${{ secrets.CLUSTER_NAME }}|g" kubeconfig.yaml
-        sed -i "s|CLUSTER_CA_PLACEHOLDER|${{ secrets.CLUSTER_CA }}|g" kubeconfig.yaml
-        sed -i "s|CLUSTER_SERVER_PLACEHOLDER|${{ secrets.CLUSTER_SERVER }}|g" kubeconfig.yaml
-        sed -i "s|KUBE_USER_PLACEHOLDER|${{ secrets.KUBE_USER }}|g" kubeconfig.yaml
-        sed -i "s|KUBE_TOKEN_PLACEHOLDER|${{ secrets.KUBE_TOKEN }}|g" kubeconfig.yaml
-        sed -i "s|KUBE_CONTEXT_PLACEHOLDER|${{ secrets.KUBE_CONTEXT }}|g" kubeconfig.yaml
     - name: Deploy to Kubernetes
       run: |
         cd kubernetes
