@@ -46,7 +46,5 @@ RUN chown -R admin1:admingroup /usr/share/nginx/html
 USER root
 RUN apt-get update && apt-get install -y --no-install-recommends libcap2-bin && setcap cap_net_bind_service=+ep /usr/sbin/nginx
 
-#USER admin1
-
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
