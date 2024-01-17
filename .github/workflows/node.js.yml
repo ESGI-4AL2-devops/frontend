@@ -92,6 +92,7 @@ jobs:
       uses: actions/checkout@v3
     - name: Prepare kubeconfig
       run: |
+        cd kubernetes
         sed -i "s/CLUSTER_NAME_PLACEHOLDER/${{ secrets.CLUSTER_NAME }}/g" kubeconfig.yaml
         sed -i "s/CLUSTER_CA_PLACEHOLDER/${{ secrets.CLUSTER_CA }}/g" kubeconfig.yaml
         sed -i "s/CLUSTER_SERVER_PLACEHOLDER/${{ secrets.CLUSTER_SERVER }}/g" kubeconfig.yaml
@@ -100,5 +101,6 @@ jobs:
         sed -i "s/KUBE_CONTEXT_PLACEHOLDER/${{ secrets.KUBE_CONTEXT }}/g" kubeconfig.yaml
     - name: Deploy to Kubernetes
       run: |
+        cd kubernetes
         kubectl --kubeconfig kubeconfig.yaml delete -f deployment.yaml
         kubectl --kubeconfig kubeconfig.yaml apply -f deployment.yaml
