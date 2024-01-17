@@ -39,7 +39,7 @@ USER admin1
 WORKDIR /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /build/dist ./
-RUN chown -R admin1:admingroup /usr/share/nginx/html
+#RUN chown -R admin1:admingroup /usr/share/nginx/html
 
 USER root
 EXPOSE 80
