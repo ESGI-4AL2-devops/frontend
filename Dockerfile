@@ -4,7 +4,7 @@ FROM node:18.11 as build
 # -m: Create the user's home directory if it doesn't exist.
 # -r: Create a system user.
 # -g admingroup: Assign the user to the "admingroup" group.
-RUN groupadd -r admingroup && useradd -m -r -g admingroup admin1
+#RUN groupadd -r admingroup && useradd -m -r -g admingroup admin1
 RUN mkdir /build
 WORKDIR /build
 COPY ./package*.json ./
