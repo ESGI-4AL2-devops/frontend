@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: loiczhu/esgi-4al2-devops-frontend
+          image: ${{ secrets.DOCKER_FRONTEND_IMAGE }}
           imagePullPolicy: Always
           ports:
             - containerPort: 80
