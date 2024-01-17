@@ -23,7 +23,7 @@ spec:
           image: loiczhu/esgi-4al2-devops-frontend
           imagePullPolicy: Always
           ports:
-            - containerPort: 80
+            - containerPort: 8080
 
 ---
 
@@ -38,7 +38,7 @@ spec:
   ports:
     - protocol: TCP
       port: 4566
-      targetPort: 80
+      targetPort: 8080
 
 ---
 
