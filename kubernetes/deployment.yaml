@@ -62,6 +62,10 @@ kind: Ingress
 metadata:
   name: frontend-ingress
   namespace: lmz
+  annotations:
+    # Ajouter une annotation pour indiquer l'issuer à utiliser. letsencrypt-staging-cluster-issuer OU letsencrypt-cluster-issuer
+    # Il s'agit d'issuers globaux que j'ai rajouté sur le cluster, pas besoin de créer votre propre cert-manager
+    cert-manager.io/cluster-issuer: letsencrypt-staging-cluster-issuer
 spec:
   # Récupérer le nom de la classe ingress ici
   ingressClassName: nginx-frontend
