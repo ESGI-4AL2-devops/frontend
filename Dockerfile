@@ -34,7 +34,9 @@ RUN npm run build
 FROM nginx:1.23
 
 RUN groupadd -r admingroup && useradd -m -r -g admingroup admin1
+RUN useradd -m -r -g admingroup admin1
 RUN usermod -a -G nginx admin1
+
 WORKDIR /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /build/dist ./
