@@ -8,7 +8,7 @@ FROM node:18.11 as build
 RUN mkdir /build
 WORKDIR /build
 COPY ./package*.json ./
-RUN chown -R admin1:admingroup /build
+#RUN chown -R admin1:admingroup /build
 
 USER admin1
 RUN npm ci --ignore-scripts
