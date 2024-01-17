@@ -2,10 +2,10 @@ FROM node:18.11 as build
 
 RUN mkdir /build
 WORKDIR /build
+
 COPY ./package*.json ./
 RUN npm ci --ignore-scripts
 
-USER root
 COPY __tests__ ./__tests__
 COPY cypress ./cypress
 COPY env/ ./env/
