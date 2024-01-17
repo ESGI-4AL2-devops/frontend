@@ -9,8 +9,8 @@ RUN mkdir /build
 WORKDIR /build
 COPY ./package*.json ./
 #RUN chown -R admin1:admingroup /build
-
-USER admin1
+#
+#USER admin1
 RUN npm ci --ignore-scripts
 
 USER root
@@ -27,7 +27,7 @@ COPY tsconfig.json ./
 COPY tsconfig.node.json ./
 COPY vite.config.ts ./
 
-USER admin1
+#USER admin1
 RUN npm run build
 
 
