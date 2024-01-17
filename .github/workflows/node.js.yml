@@ -66,7 +66,7 @@ jobs:
     - name: Build app
       run: |
         npm run build --if-present
-      
+
   push-docker-image:
     name: Push Docker image to DockerHub
     runs-on: ubuntu-latest
@@ -84,3 +84,21 @@ jobs:
         run: |
           docker push ${{ secrets.DOCKER_FRONTEND_IMAGE }}
 
+  prepare-kubeconfig:
+    name: Prepare kubeconfig
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Prepare kubeconfig
+      run: |
+        sed -i "s/CLUSTER_NAME_PLACEHOLDER/${{ secrets.CLUSTER_NAME }}/g" kubeconfig.yaml
+        sed -i "s/CLUSTER_CA_PLACEHOLDER/${{ secrets.CLUSTER_CA }}/g" kubeconfig.yaml
+        sed -i "s/CLUSTER_SERVER_PLACEHOLDER/${{ secrets.CLUSTER_SERVER }}/g" kubeconfig.yaml
+        sed -i "s/KUBE_USER_PLACEHOLDER/${{ secrets.KUBE_USER }}/g" kubeconfig.yaml
+        sed -i "s/KUBE_TOKEN_PLACEHOLDER/${{ secrets.KUBE_TOKEN }}/g" kubeconfig.yaml
+        sed -i "s/KUBE_CONTEXT_PLACEHOLDER/${{ secrets.KUBE_CONTEXT }}/g" kubeconfig.yaml
+    - name: Deploy to Kubernetes
+      run: |
+        kubectl --kubeconfig kubeconfig.yaml delete -f deployment.yaml
+        kubectl --kubeconfig kubeconfig.yaml apply -f deployment.yaml
