@@ -22,6 +22,7 @@ COPY vite.config.ts ./
 
 RUN npm run build
 
+# ---
 
 FROM nginx:1.23
 
