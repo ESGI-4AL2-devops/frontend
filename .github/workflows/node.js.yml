@@ -88,3 +88,14 @@ jobs:
       - name: Build and push Docker image
         run: |
           docker push loiczhu/esgi-4al2-devops-frontend
+
+  prepare-kubeconfig:
+    name: Prepare kubeconfig
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Deploy to Kubernetes
+        run: |
+          cd kubernetes
+          kubectl --kubeconfig kubeconfig.yaml apply -f deployment.yaml
