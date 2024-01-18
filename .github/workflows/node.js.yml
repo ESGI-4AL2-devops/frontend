@@ -72,7 +72,7 @@ jobs:
       run: |
         npm run build --if-present
 
-  push-docker-image:
+  docker-image:
     name: Push Docker image to DockerHub
     runs-on: ubuntu-latest
     steps:
@@ -89,8 +89,9 @@ jobs:
         run: |
           docker push ${{ secrets.DOCKER_FRONTEND_IMAGE }}
 
-  prepare-kubeconfig:
+  deploy-to-kubernetes:
     name: Prepare kubeconfig
+    needs: docker-image
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code

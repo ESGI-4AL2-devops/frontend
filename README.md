@@ -47,7 +47,7 @@ npm run build
   - [x] pour _PR_
   - [x] déploiement de _releases_ (sur des _tags_)
   - [x] calculer et afficher la couverture des tests unitaires dans les _PR_
-  - [ ] déploiement sur Kubernetes (_pipeline_ peut être lancée manuellement)
+  - [x] déploiement sur Kubernetes (_pipeline_ peut être lancée manuellement)
   - [ ] déploiement sur Kubernetes avec Helm
 
 ### Longs
