@@ -34,13 +34,9 @@ RUN npm run build
 
 FROM nginx:1.23
 
-RUN groupadd -r admingroup && useradd -m -r -g admingroup admin1
-RUN usermod -aG nginx admin1
-
 WORKDIR /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /build/dist ./
-RUN chown -R admin1:admingroup /usr/share/nginx/html
 
 # Grant capabilities to the Nginx binary to bind to well-known ports
 USER root
