@@ -1,16 +1,9 @@
 FROM node:18.11 as build
 
-# in Debian, create a system group (`-r`) + add "admin1" to it
-# -m: Create the user's home directory if it doesn't exist.
-# -r: Create a system user.
-# -g admingroup: Assign the user to the "admingroup" group.
-RUN groupadd -r admingroup && useradd -m -r -g admingroup admin1
 RUN mkdir /build
 WORKDIR /build
 COPY ./package*.json ./
-RUN chown -R admin1:admingroup /build
 
-USER admin1
 RUN npm ci --ignore-scripts
 
 USER root
@@ -27,7 +20,6 @@ COPY tsconfig.json ./
 COPY tsconfig.node.json ./
 COPY vite.config.ts ./
 
-USER admin1
 RUN npm run build
 
 # ---
@@ -37,10 +29,6 @@ FROM nginx:1.23
 WORKDIR /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /build/dist ./
-
-# Grant capabilities to the Nginx binary to bind to well-known ports
-USER root
-RUN apt-get update && apt-get install -y --no-install-recommends libcap2-bin && setcap cap_net_bind_service=+ep /usr/sbin/nginx
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
