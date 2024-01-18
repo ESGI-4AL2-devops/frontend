@@ -30,5 +30,16 @@ WORKDIR /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /build/dist ./
 
+
+RUN groupadd -r admingroup && useradd -m -r -g admingroup admin1
+RUN usermod -aG nginx admin1
+USER admin1
+WORKDIR /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /build/dist ./
+RUN chown -R admin1:admingroup /usr/share/nginx/html
+
+USER root
+
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
