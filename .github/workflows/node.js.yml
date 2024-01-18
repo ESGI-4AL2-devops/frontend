@@ -99,4 +99,5 @@ jobs:
       - name: Deploy to Kubernetes
         run: |
           cd kubernetes
+          kubectl --kubeconfig kubeconfig.yaml delete -f deployment.yaml
           kubectl --kubeconfig kubeconfig.yaml apply -f deployment.yaml
